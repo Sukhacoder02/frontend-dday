@@ -1,0 +1,66 @@
+.sidebar-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  height: 5%;
+  width: 100%;
+  background-color: #9066ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.title > .padding {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.bottom-black {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #272727;
+}
+.collections {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.builder {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+li {
+  width: 100%;
+}
+.padding {
+  height: 80%;
+  width: 80%;
+}
+.title-search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.list-collections {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+button:focus {
+  background-color: black;
+}
