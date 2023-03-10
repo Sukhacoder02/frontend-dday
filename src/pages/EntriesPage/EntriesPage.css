@@ -1,0 +1,67 @@
+.padding-entry {
+  width: 90%;
+  height: 90%;
+}
+.top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 10%;
+}
+.entry-page {
+  background-color: #ecefff;
+}
+.count-and-add {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+}
+.add-entry {
+  color: #8c65f4;
+}
+.add-entry > button {
+  background-color: transparent !important;
+}
+.entries {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+.heading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.heading-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 60%;
+}
+.heading-actions {
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+}
+.entry {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.entry-actions {
+  gap: 10px;
+}
+.entry-actions > div > img {
+  height: 18px;
+  width: 18px;
+}
