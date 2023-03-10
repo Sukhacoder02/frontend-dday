@@ -7,7 +7,7 @@ const Header: React.FC<HeaderProps> = (props: HeaderProps): JSX.Element => {
   return (
     <header>
       <div className="header-title">
-        <h2>{props.title}</h2>
+        <h2 className="font-bold text-xl">{props.title}</h2>
       </div>
     </header>
   );
