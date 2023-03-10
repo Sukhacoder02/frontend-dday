@@ -1,0 +1,9 @@
+.entry {
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.entry-left > div > p {
+  margin-left: 10px;
+}
