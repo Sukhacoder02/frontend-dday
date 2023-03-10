@@ -35,7 +35,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: beige;
+  background-color: #d4d6e5;
 }
 .right {
   height: 100%;
@@ -44,5 +44,5 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: brown;
+  background-color: #eaeefe;
 }

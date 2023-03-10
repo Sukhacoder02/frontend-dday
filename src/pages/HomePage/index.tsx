@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import SideBar from '../../components/SideBar';
 import './HomePage.css';
 import Header from '../../components/Header';
+import cmsImage from '../../assets/login-image/undraw-upload-re-pasx.png';
 
 const HomePage: React.FC = (): JSX.Element => {
   const navigate = useNavigate();
@@ -24,8 +25,7 @@ const HomePage: React.FC = (): JSX.Element => {
           <Header title="Content Types" />
         </div>
         <div className="belowbar">
-          <div className="left">LEFT</div>
-          <div className="right">RIGHT</div>
+          <img src={cmsImage} alt="" />
         </div>
       </div>
     </div>
