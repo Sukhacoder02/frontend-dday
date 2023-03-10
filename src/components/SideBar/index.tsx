@@ -44,7 +44,9 @@ const SideBar: React.FC = (): JSX.Element => {
         </div>
         <div className="builder">
           <div className="padding">
-            <button className="text-white">CONTENT-TYPE BUILDER</button>
+            <button onClick={() => navigate('/content-types')} className="text-white">
+              CONTENT-TYPE BUILDER
+            </button>
           </div>
         </div>
       </div>
