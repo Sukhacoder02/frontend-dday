@@ -18,8 +18,9 @@ function App() {
           />
           <Route path="/signup" element={<LoginPage title="Signup with CMS+" buttonText="Sign Up" login={false} />} />
           <Route path="/home" element={<HomePage />} />
-          <Route path="/entries" element={<EntriesPage />} />
+          <Route path="/entries/:contentTypeId" element={<EntriesPage />} />
           <Route path="/content-types" element={<ContentTypesPage />} />
+          <Route path="/content-types/:contentTypeId" element={<ContentTypesPage />} />
         </Routes>
       </BrowserRouter>
     </div>
