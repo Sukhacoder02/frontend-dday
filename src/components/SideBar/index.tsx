@@ -1,26 +1,47 @@
 import * as React from 'react';
 import authHeader from '../../services/auth.header';
 import { useNavigate } from 'react-router-dom';
+import makeRequest from '../../utils/MakeRequest';
 import './SideBar.css';
 import iconSearch from '../../assets/icon-search/icon-search-dark.png';
+import { GET_ALL_CONTENT_TYPES } from '../../constants/ApiEndPoints';
 
 const mockCollections = ['Company_Profile', 'Idv_functionals', 'Payment_functionals', 'Trials', 'users', '+2 more'];
 
+interface Collection {
+  name: string;
+  createdAt: string;
+  fields: [string[]];
+  id: number;
+  updatedAt: string;
+}
+
 const SideBar: React.FC = (): JSX.Element => {
-  const [collections, setCollections] = React.useState([]);
+  const [collections, setCollections] = React.useState([] as unknown as Collection[]);
   const navigate = useNavigate();
-  // React.useEffect(() => {
-  //   const header = authHeader();
-  //   if (Object.keys(header).length === 0) {
-  //     navigate('/login');
-  //   }
-  // }, []);
-  const c = mockCollections.map(collection => {
+  React.useEffect(() => {
+    const header = authHeader();
+    if (Object.keys(header).length === 0) {
+      navigate('/login');
+    }
+    makeRequest(GET_ALL_CONTENT_TYPES, {
+      headers: authHeader(),
+    }).then(data => {
+      setCollections(data);
+    });
+  }, []);
+  const c = collections.map(collection => {
     return (
-      <button key={1}>
-        <li key={1} className="text-gray-400 text-base">
-          {collection}
-        </li>
+      <button
+        key={collection.id}
+        onClick={() => {
+          navigate(`/entries/${collection.id}`, {
+            state: {
+              collectionName: collection.name,
+            },
+          });
+        }}>
+        <li className="text-gray-400 text-base">{collection.name}</li>
       </button>
     );
   });
