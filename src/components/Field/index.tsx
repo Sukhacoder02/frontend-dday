@@ -4,6 +4,7 @@ import iconTrash from './../../assets/icon-trash/trash-delete-recycle-bin-bucket
 import './Field.css';
 interface FieldProps {
   name: string;
+  deleteFieldHandler: (fieldName: string) => Promise<void>;
 }
 const Field: React.FC<FieldProps> = (props: FieldProps) => {
   return (
@@ -18,8 +19,18 @@ const Field: React.FC<FieldProps> = (props: FieldProps) => {
         <p>Text</p>
       </div>
       <div className="field-actions flex flex-row">
-        <img src={iconPencil} alt="" />
-        <img src={iconTrash} alt="" />
+        <button
+          onClick={() => {
+            console.log('Pencil clicked');
+          }}>
+          <img src={iconPencil} alt="" />
+        </button>
+        <button
+          onClick={() => {
+            props.deleteFieldHandler(props.name);
+          }}>
+          <img src={iconTrash} alt="" />
+        </button>
       </div>
     </div>
   );
