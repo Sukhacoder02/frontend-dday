@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<div>React APP</div>} />
+          <Route path="/" element={<HomePage />} />
           <Route
             path="/login"
             element={<LoginPage title="Login to your CMS+ account" buttonText="Login" login={true} />}
